@@ -64,11 +64,18 @@ export default function EventDetailPage() {
         </div>
       </div>
       <div className="right">
+            <div>
+                <p>{address}</p>
+                <p>{location}</p>
+                <p>{price}</p>
+            </div>
+
         <div>
             {speakers?.map((i)=>{
                 return <div key={i.name}>
                     <img src={i.image} alt="icon" className="profileIcon"/>
                     <span>{i.name}</span>
+                    <span>{i.designation}</span>
                 </div>
             })}
         </div>

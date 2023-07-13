@@ -12,3 +12,21 @@
 .card >img {
     width: 200px;
 }
+button {
+    background-color: #ef4f5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d93d4c;
+  }
+  
+  button:focus {
+    outline: none;
+  }

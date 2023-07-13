@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/dist";
 import { meetupsData } from "../../util";
 import { ModalCustom } from "../../components";
-
+import "./style.css"
 export default function EventDetailPage() {
   const [eventDetail, setEventDetail] = useState("");
   const [name, setName] = useState("");
@@ -46,29 +46,41 @@ export default function EventDetailPage() {
       <div className="left">
         <h1>{title}</h1>
         <div>Hosted by : {hostedBy}</div>
-        <img src={eventThumbnail} alt="eventThumbnail" />
+        <img src={eventThumbnail} alt="eventThumbnail" className="image"/>
         <h3>Details :</h3>
         <p>{eventDescription}</p>
         <div>
             <h3>Additional Information:</h3>
-            <div><span> dress code </span>:{additionalInformation.dressCode}</div>
-            <div><span> Age Restriction  </span>:{additionalInformation.ageRestrictions}</div>
+            <div><span> dress code </span>:{additionalInformation?.dressCode}</div>
+            <div><span> Age Restriction  </span>:{additionalInformation?.ageRestrictions}</div>
         </div>
         <div>
             <h3>Eevent tags :</h3>
             {
-                eventTags.map((i)=>{
+                eventTags?.map((i)=>{
                   return <div key={i}>{i}</div>
                 })
             }
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <div>
+            {speakers?.map((i)=>{
+                return <div key={i.name}>
+                    <img src={i.image} alt="icon" className="profileIcon"/>
+                    <span>{i.name}</span>
+                </div>
+            })}
+        </div>
+
       {!isEventPass && (
         <button onClick={handleOpen} disabled={isRsvp}>
           {isRsvp ? "AlreadyRSVped" : "RSVP"}
         </button>
+
+
       )}
+      </div>
 
       <ModalCustom
         open={open}
@@ -76,7 +88,7 @@ export default function EventDetailPage() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div>
+        <div className="modal">
           <input
             type="text"
             placeholder="add your name"

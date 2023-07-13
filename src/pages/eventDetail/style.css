@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    padding: 3rem;
+    gap: 2rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.right{
+    flex: 1;
+}
+.left > img {
+    width: 300px;
+
+}
+.profileIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+/* .image {
+    width: 207px;
+
+} */

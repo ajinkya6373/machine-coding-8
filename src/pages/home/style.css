@@ -1,0 +1,14 @@
+
+.cardContainer{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card >img {
+    width: 200px;
+}

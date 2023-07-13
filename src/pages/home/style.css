@@ -21,6 +21,7 @@ button {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    margin: 1rem;
   }
   
   button:hover {
@@ -29,4 +30,7 @@ button {
   
   button:focus {
     outline: none;
+  }
+  button:disabled{
+    opacity: 0.5;
   }

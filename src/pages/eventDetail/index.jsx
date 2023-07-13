@@ -65,9 +65,9 @@ export default function EventDetailPage() {
       </div>
       <div className="right">
             <div>
-                <p>{address}</p>
-                <p>{location}</p>
-                <p>{price}</p>
+                <p> <span>address:</span> {address}</p>
+                <p><span>location:</span> {location}</p>
+                <p><span>price:</span> {price}</p>
             </div>
 
         <div>

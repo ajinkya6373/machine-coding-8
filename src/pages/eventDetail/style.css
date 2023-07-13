@@ -25,6 +25,9 @@
     flex-direction: column;
     background-color: white;
 }
+span{
+    font-weight: bold;
+}
 /* .image {
     width: 207px;
 

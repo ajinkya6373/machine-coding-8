@@ -58,7 +58,7 @@ export default function EventDetailPage() {
             <h3>Eevent tags :</h3>
             {
                 eventTags?.map((i)=>{
-                  return <div key={i}>{i}</div>
+                  return <div key={i} className="tag">{i}</div>
                 })
             }
         </div>

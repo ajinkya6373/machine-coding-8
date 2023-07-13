@@ -12,6 +12,19 @@
 .card >img {
     width: 200px;
 }
+
+.tag{
+    background-color: #ef4f5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 1rem;
+    width: 10%;
+}
 button {
     background-color: #ef4f5f;
     color: white;

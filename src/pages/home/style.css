@@ -1,4 +1,15 @@
-
+.wrapperPage{
+    padding: 2rem;
+    gap:1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+h1{
+    margin: 0;
+}
 .cardContainer{
     display: flex;
     gap: 1rem;
@@ -23,7 +34,7 @@
     font-weight: bold;
     cursor: pointer;
     margin: 1rem;
-    width: 10%;
+    width: fit-content;
 }
 button {
     background-color: #ef4f5f;

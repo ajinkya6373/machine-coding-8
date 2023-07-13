@@ -45,11 +45,10 @@ export default function HomePage() {
          setSortedMeetUps(res2)
         },[sortBy,searchQuery])
   return (
-    <div>
-        <div className="">
-            <h1>Meet up</h1>
+    <div className="wrapperPage">
+        <div className="header">
+            <h1>Meetup Events</h1>
             <input type="text" placeholder="search " onChange={(e)=>setSearchQuery(e.target.value)}/>
-        </div>
         {
             <div>
                 <select name="" id="" onChange={(e)=>setSortBy(e.target.value)}>
@@ -59,13 +58,14 @@ export default function HomePage() {
                 </select>
             </div>
         }
+        </div>
         <div className="cardContainer">
         {
             sortedMeetUps?.map((i)=>{
                 return <div key={i.id} className="card" onClick={()=>navigate(`/event-detail/${i.id}`)}>
                     <img src={i.eventThumbnail} alt="eventThumbnail" />
-                    <span>{i.title}</span>
-                    <span>{i.eventType}</span>
+                    <span>{i.title } </span>
+                    <span> { i.eventType} </span>
                 </div>
             })
         }

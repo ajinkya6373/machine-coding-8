@@ -54,9 +54,16 @@ export default function EventDetailPage() {
             <div><span> dress code </span>:{additionalInformation.dressCode}</div>
             <div><span> Age Restriction  </span>:{additionalInformation.ageRestrictions}</div>
         </div>
+        <div>
+            <h3>Eevent tags :</h3>
+            {
+                eventTags.map((i)=>{
+                  return <div key={i}>{i}</div>
+                })
+            }
+        </div>
       </div>
       <div className="right"></div>
-      <h1>{eventDetail.title}</h1>
       {!isEventPass && (
         <button onClick={handleOpen} disabled={isRsvp}>
           {isRsvp ? "AlreadyRSVped" : "RSVP"}
